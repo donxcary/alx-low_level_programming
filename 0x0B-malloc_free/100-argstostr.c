@@ -1,44 +1,42 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
- * argstostr - A function that concatenates all arguments of your program
- * @ac: number of arguments
- * @av: array containing arguments
- * Return: A pointer to string that containing all arguments
- * or NULL if ac == 0, if av == NULL, or upon failure
+ * argstostr - main entry
+ * @ac: int input
+ * @av: double pointer array
+ * Return: 0
  */
+
 char *argstostr(int ac, char **av)
 {
-	char *new_str;
-	int len = 0, i = 0, j, k = 0;
+	int i, n, r = 0, l = 0;
+	char *str;
 
-	if (ac <= 0 || av == NULL)
-		return (NULL);
-
-	for (; i < ac; i++)
-	{
-		for (j = 0; av[i][j]; j++)
-			len++;
-		len++;
-	}
-
-	len++;
-	new_str = malloc(len * sizeof(char));
-	if (new_str == NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j]; j++)
-		{
-			new_str[k] = av[i][j];
-			k++;
-		}
-		new_str[k] = '\n';
-		k++;
+		for (n = 0; av[i][n]; n++)
+			l++;
 	}
+	l += ac;
 
-	new_str[k] = '\0';
-	return (new_str);
+	str = malloc(sizeof(char) * l + 1);
+	if (str == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
+	{
+	for (n = 0; av[i][n]; n++)
+	{
+		str[r] = av[i][n];
+		r++;
+	}
+	if (str[r] == '\0')
+	{
+		str[r++] = '\n';
+	}
+	}
+	return (str);
 }
