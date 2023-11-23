@@ -23,9 +23,3 @@ int main(void)
     printf("%lu\n", n);
     return (0);
 }
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */

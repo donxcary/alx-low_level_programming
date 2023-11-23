@@ -9,13 +9,11 @@
 
 int get_endianness(void)
 {
-	unsigned int data = 1;
-char *c = (char *)&data;
+	unsigned int data = 0x98765432;
+	unsigned char *c = (unsigned char *)&data;
 
-if (*c)
-	return (1);
-else
-	return (0);
+if (*c == 0x32)
+		return (1);
+	else
+return (0);
 }
-
-
