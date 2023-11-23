@@ -1,69 +1,38 @@
-#include "main.h"
-#include <stdio.h>
-
-int binary_len(const char *b);
-int _pow(int x, int y);
+#include "holberton.h"
 
 /**
  * binary_to_uint - converts a binary number to an unsigned int
- * @b: binary number
- *
- * Return: unsigned int
+ * @b: pointer to a string of 0 and 1 chars
+ * Return: the converted number or 0 if there is one or more chars in the
+ * string b that is not 0 or 1 or if b is NULL
  */
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num = 0;
-	int i, len;
+	unsigned int res = 0, one, i;
+	int l = 0;
 
-	if (b == NULL)
+	if (b == 0)
 		return (0);
 
-	len = binary_len(b);
 
-	for (i = 0; b[i] != '\0'; i++)
+	while (b[l] != 0)
 	{
-		if (b[i] == '1')
-		num += _pow(2, len - 1);
-		else if (b[i] != '0')
-		return (0);
-		len--;
+		if (b[l] != '0' && b[l] != '1')
+			return (0);
+		l++;
 	}
 
-	return (num);
-}
+	l = l - 1;
 
-/**
- * binary_len - returns the length of a string
- * @b: string
- *
- * Return: length of string
- */
-
-int binary_len(const char *b)
-{
-	int i;
-
-	for (i = 0; b[i] != '\0'; i++)
-		;
-
-	return (i);
-}
-
-/**
- * _pow - returns the value of x raised to the power of y
- * @x: base
- * @y: exponent
- *
- * Return: value of x raised to the power of y
- */
-
-int _pow(int x, int y)
-{
-	int i, num = 1;
-
-	for (i = 0; i < y; i++)
-		num *= x;
-
-	return (num);
+	for (i = 0; l >= 0; i++, l--)
+	{
+		if (b[l] == '0')
+			one = 0;
+		else if (b[l] == '1')
+			one = 1;
+		one = one << i;
+		res = res | one;
+	}
+	return (res);
 }
