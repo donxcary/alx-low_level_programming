@@ -14,3 +14,4 @@ chmod u+x start.xt
 
 ./start.xt
 
+cal
