@@ -24,9 +24,9 @@ unsigned int binary_to_uint(const char *b)
 	for (i = 0; b[i] != '\0'; i++)
 	{
 		if (b[i] == '1')
-			num += _pow(2, len - 1);
+		num += _pow(2, len - 1);
 		else if (b[i] != '0')
-			return (0);
+		return (0);
 		len--;
 	}
 
