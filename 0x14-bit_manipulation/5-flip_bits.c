@@ -21,10 +21,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	return (bits);
 }
 
-int get_endianness(void)
-{
-	return 0;
-}
 
 /**
  * flip_bits - Counts the number of bits needed to be
