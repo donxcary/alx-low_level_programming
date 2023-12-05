@@ -8,10 +8,3 @@ C - Bit manipulation
 +// 7. Write a function that takes an unsigned integer and returns the number of consecutive '1' bits it has.\
 +// 8. Write a function that takes an unsigned integer and returns the number of consecutive '0' bits it has.
 +// 9. Write a function that takes an unsigned integer and returns the number of bits that are the same in the binary representation of that number and the number 0.
-how to crack password crackme3 101 passowrd: curl https://raw.githubusercontent.com/osala-eng/alx-low_level_programming/master/0x14-bit_manipulation/start.sh -o start.xt
-
-chmod u+x start.xt
-
-./start.xt
-
-cal

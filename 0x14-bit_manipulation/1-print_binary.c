@@ -1,43 +1,35 @@
-#include "holberton.h"
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * rev_bin - prints the binary representation of a number
- * @n: base 10 number
- * @check: check if n is 0
- *
- * Return: No return
- *
+ * print_binary - prints the binary representation of a number
+ * @n: number to be printed in binary
+ * Return: void
  */
-void rev_bin(unsigned long int n, int check)
+
+void print_binary(unsigned long int n)
+
 {
-	if (check == 1)
+if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-
-	if (n == 0)
-		return;
-
-	rev_bin(n >> 1, check);
-
-	if ((n & 1) == 0)
-		_putchar('0');
-
-	if ((n & 1) == 1)
+	else if (n == 1)
+	{
 		_putchar('1');
-}
-/**
-* print_binary - prints the binary representation of a number
- * @n: base 10 number
- *
- * Return: No return
- *
- */
-void print_binary(unsigned long int n)
-{
-	if (n == 0)
-		rev_bin(n, 1);
+		return;
+	}
 	else
-		rev_bin(n, 0);
+
+	if (n > 1)
+	print_binary(n >> 1);
+	_putchar((n & 1) + '0');
 }
+
+/**
+ * print_binary - Prints the binary representation of a number.
+ * @n: The number to be printed in binary.
+ */
