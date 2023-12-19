@@ -1,10 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * powr - function that returns the value of x raised to the power of y
  * @a: base
  * @b: exponent
+ *
  * Return: value of x raised to the power of y
  */
 unsigned long int powr(unsigned long int a, unsigned long int b)
@@ -28,15 +28,10 @@ unsigned long int powr(unsigned long int a, unsigned long int b)
 }
 
 /**
- * pow - function to evaluate a number raised to power of other number
- * @a: number to the power of
- * @b: the power to be raised
- * Return: result of power
- */
-
-/**
  * print_binary - function that prints the binary representation of a number
  * @n: decimal number to be converted
+ *
+ * Return: Nothhing
  */
 
 void print_binary(unsigned long int n)
@@ -62,8 +57,3 @@ void print_binary(unsigned long int n)
 	}
 	printf("%lu", k);
 }
-
-/**
- * print_binary - function that prints the binary representation of a number
- * @n: decimal number to be converted
- */

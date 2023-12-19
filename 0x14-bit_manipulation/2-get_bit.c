@@ -3,6 +3,8 @@
 /**
  * num_digits - function to count number of digits in a number
  * @num: number to be counted
+ *
+ *
  * Return: number of digits
  */
 unsigned int num_digits(unsigned int num)
@@ -27,15 +29,10 @@ unsigned int num_digits(unsigned int num)
 }
 
 /**
- * num_digits - function to count digits in a number
- * @num: number to be counted
- * Return: digits
- */
-
-/**
  * powr - function to calculate power of a number
  * @a: base
  * @b: power
+ *
  * Return: power of a number
  */
 unsigned long int powr(unsigned long int a, unsigned long int b)
@@ -59,18 +56,12 @@ unsigned long int powr(unsigned long int a, unsigned long int b)
 }
 
 /**
- * pow - function to evaluate a number raised to power of other number
- * @a: number to the power of
- * @b: the power to be raised
- * Return: result of power
- */
-
-
-/**
  * print_bin - function to print binary of a number
  * @n: number to be printed
+ *
  * Return: binary of a number
  */
+
 unsigned long int print_bin(unsigned long int n)
 {
 	int i;
@@ -96,16 +87,10 @@ unsigned long int print_bin(unsigned long int n)
 }
 
 /**
- * print_bin - function that prints the binary representation of a number
- * @n: decimal number to be converted
- *
- * Return: converted binary number
- */
-
-/**
  * get_bit - function that returns the value of a bit at a given index
  * @n: number to be evaluated
  * @index: index of the bit to be returned
+ *
  * Return: value of the bit at index
  */
 int get_bit(unsigned long int n, unsigned int index)
@@ -125,12 +110,3 @@ int get_bit(unsigned long int n, unsigned int index)
 	num = bin_2 % 10;
 	return (num);
 }
-
-/**
-*get_bit - Gets the value of a bit at a given index.
-* @n: The bit.
-* @index : The index to get the value at - indices start at 0.
-*
-*Return : If an error occurs - -1.
-*Otherwise - The value of bit at index.
-* /
