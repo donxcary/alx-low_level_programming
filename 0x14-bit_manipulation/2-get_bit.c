@@ -1,4 +1,8 @@
 #include "main.h"
+#include <stdio.h>
+
+#define CHAR_BIT 8
+
 
 /**
  * get_bit - function that returns the value of a bit at a given index
